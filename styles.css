@@ -1,0 +1,52 @@
+/* Сайт розроблено студенткою Шульженко Іриною, група 5-9з, ФЕМП */
+:root{
+  --bg:#fff7f8;
+  --card:#ffffff;
+  --accent:#f2c6cb;
+  --muted:#6b6b6b;
+  --text:#2b2b2b;
+  --maxw:1000px;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+body{
+  background:linear-gradient(180deg,var(--bg),#fff);
+  color:var(--text);
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  margin:0;
+  padding:0;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:var(--maxw);margin:0 auto;padding:16px}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.site-header{background:transparent;padding:18px 0}
+.site-header h1{font-size:18px;margin:0}
+.main-nav{display:flex;gap:8px}
+.nav-btn{background:transparent;border:1px solid transparent;padding:8px 12px;border-radius:8px;cursor:pointer}
+.nav-btn.active{background:var(--card);box-shadow:0 4px 10px rgba(0,0,0,0.06);border-color:rgba(0,0,0,0.06)}
+.tab{display:none;padding:18px 0}
+.tab.active{display:block}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(19,19,19,0.04)}
+.note{color:var(--muted);font-size:14px}
+.calc-form{display:grid;gap:12px;align-items:start}
+label{display:flex;flex-direction:column;gap:6px;font-weight:600}
+select, input, textarea{padding:8px;border-radius:8px;border:1px solid #eee;background:transparent}
+fieldset.breakdown{border:1px dashed rgba(0,0,0,0.06);padding:12px;border-radius:8px}
+.results{margin-top:6px}
+.result-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f6f6f6}
+.total{font-weight:700;font-size:18px;padding:12px 6px;background:linear-gradient(90deg,rgba(242,198,203,0.15),transparent);border-radius:8px;margin-top:6px}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+button{background:var(--accent);border:none;padding:8px 12px;border-radius:10px;cursor:pointer}
+button:disabled{opacity:.6;cursor:not-allowed}
+.contact-form{display:grid;gap:8px;max-width:520px}
+.status{margin-top:8px;color:var(--muted)}
+.site-footer{background:transparent;padding:18px 0;margin-top:24px;border-top:1px solid rgba(0,0,0,0.03)}
+.footer-inner{display:flex;justify-content:space-between;gap:12px;align-items:center}
+
+/* Responsive */
+@media (max-width:720px){
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .main-nav{flex-wrap:wrap}
+}

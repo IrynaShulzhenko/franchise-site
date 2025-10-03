@@ -1,0 +1,101 @@
+<!-- Сайт розроблено студенткою Шульженко Іриною, група 5-9з, ФЕМП -->
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Франшиза — стартові витрати | Шульженко Ірина</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Сайт розроблено студенткою Шульженко Іриною, група 5-9з, ФЕМП -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Франшиза — розрахунок стартових витрат</h1>
+      <nav class="main-nav" id="mainNav">
+        <button data-tab="home" class="nav-btn active">Головна</button>
+        <button data-tab="types" class="nav-btn">Типи франшизи</button>
+        <button data-tab="calculator" class="nav-btn">Калькулятор стартових витрат</button>
+        <button data-tab="contacts" class="nav-btn">Контакти / Про нас</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="tab active">
+      <h2>Ласкаво просимо</h2>
+      <p>Цей навчальний сайт демонструє умови купівлі франшизи та клієнтський калькулятор стартових витрат. Інтерфейс — українською. Автор: <strong>Шульженко Ірина, група 5-9з, ФЕМП</strong>.</p>
+      <ul>
+        <li>Оберіть вкладку <em>Типи франшизи</em>, щоб ознайомитись із доступними пакетами.</li>
+        <li>У вкладці <em>Калькулятор стартових витрат</em> оберіть тип франшизи та місто — JS підрахує підсумок.</li>
+      </ul>
+    </section>
+
+    <section id="types" class="tab">
+      <h2>Типи франшизи</h2>
+      <div id="franchiseList" class="card-grid">
+        <!-- Заповнюється JS -->
+      </div>
+      <p class="note">Всі цифри умовні та призначені для демонстрації. Валюта — UAH.</p>
+    </section>
+
+    <section id="calculator" class="tab">
+      <h2>Калькулятор стартових витрат</h2>
+      <form id="calcForm" class="calc-form" onsubmit="return false;">
+        <label>
+          Тип франшизи
+          <select id="franchiseSelect"></select>
+        </label>
+
+        <label>
+          Місто
+          <select id="citySelect"></select>
+        </label>
+
+        <fieldset class="breakdown">
+          <legend>Статті витрат (фіксовані за обраним пакетом)</legend>
+          <div id="breakdownList"></div>
+        </fieldset>
+
+        <div class="results">
+          <h3>Результат</h3>
+          <div id="resultDetails"></div>
+          <div id="resultTotal" class="total"></div>
+        </div>
+
+        <div class="actions">
+          <button id="saveBtn" type="button">Зберегти в localStorage</button>
+          <button id="loadBtn" type="button">Завантажити з localStorage</button>
+          <button id="downloadCsvBtn" type="button">Завантажити CSV</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="contacts" class="tab">
+      <h2>Контакти / Про нас</h2>
+      <p><strong>Автор:</strong> Шульженко Ірина</p>
+      <p><strong>Група:</strong> 5-9з, ФЕМП</p>
+      <p>Електронна пошта: <a href="mailto:iryna.shulzhenko@example.com">iryna.shulzhenko@example.com</a></p>
+      <p>Телефон (демо): +380 (66) 555-1234</p>
+
+      <h3>Зворотній зв'язок</h3>
+      <form id="contactForm" onsubmit="return false;" class="contact-form">
+        <label>Ім'я<input id="cfName" required></label>
+        <label>Електронна пошта<input id="cfEmail" type="email" required></label>
+        <label>Повідомлення<textarea id="cfMessage" rows="4" required></textarea></label>
+        <button id="cfSend" type="button">Надіслати (демо)</button>
+      </form>
+      <div id="cfStatus" class="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Сайт розроблено студенткою <strong>Шульженко Іриною</strong>, група 5-9з, ФЕМП.</p>
+      <p>© <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
