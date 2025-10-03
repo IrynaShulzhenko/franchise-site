@@ -7,8 +7,8 @@ const DATA = {
   franchises: [
     {
       id: 'micro',
-      name: 'Мікро (стартовий)',
-      description: 'Мінімальний пакет для швидкого запуску',
+      name: 'StartUp Café',
+      description: 'Міні-кафе для початку бізнесу',
       baseFee: 15000,
       breakdown: {
         rent: 20000,
@@ -21,8 +21,8 @@ const DATA = {
     },
     {
       id: 'small',
-      name: 'Мала франшиза',
-      description: 'Популярний пакет з базовим оснащенням',
+      name: 'Urban Eatery',
+      description: 'Стандартний пакет для міських кафе/магазинів',
       baseFee: 40000,
       breakdown: {
         rent: 35000,
@@ -35,8 +35,8 @@ const DATA = {
     },
     {
       id: 'medium',
-      name: 'Середня франшиза',
-      description: 'Розширений пакет для міського магазину/кафе',
+      name: 'Premium Bistro',
+      description: 'Розширений пакет з повним обладнанням',
       baseFee: 90000,
       breakdown: {
         rent: 70000,
@@ -49,8 +49,8 @@ const DATA = {
     },
     {
       id: 'large',
-      name: 'Велика франшиза',
-      description: 'Максимальний пакет для масштабного запуску',
+      name: 'Gourmet Hub',
+      description: 'Повний масштабний пакет для ресторану/кафе',
       baseFee: 200000,
       breakdown: {
         rent: 150000,
